@@ -20,6 +20,14 @@ namespace GMVC.Controllers
             return View();
         }
 
+        public IActionResult Chart1()
+        {
+            return View();
+        }
+        public IActionResult Chart2()
+        {
+            return View();
+        }
         public IActionResult PGSQL_test()
         {
             return View();
