@@ -1,0 +1,20 @@
+<ul class="side-nav fixed grey lighten-5 col l2 s4" style="margin-top:64px" id="nav-sidebar">
+    <li><a href="/home/PGSQL_test" class="waves-effect">PG Test</a></li>
+    <li><a href="/home/table_test" class="waves-effect">table</a></li>        
+    <li><a href="#!" class="waves-effect">Section 3</a></li>
+    <li><a href="#!" class="waves-effect">Section 4</a></li>
+    <li><a href="#!" class="waves-effect">Try a drop down</a></li>
+    <li><a href="#!" class="waves-effect">
+        Try a pill aligned right
+        <div class="chip">
+            5
+        </div>
+    </a>
+     </li>
+    <script>
+        $(".button-collapse").sideNav({
+            onClose: function(){$('body').css('overflow','hidden')}//For some reason it keeps nulling this property
+        });
+    </script>
+</ul>
+<div class="col l2 hide-on-med-and-down"></div>

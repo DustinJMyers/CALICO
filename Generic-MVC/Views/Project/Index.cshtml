@@ -1,0 +1,113 @@
+<div style="overflow:hidden" class="row grey lighten-2">
+    <nav>
+        <div class="nav-wrapper red accent-4">
+            <a href="/home/contact" class="brand-logo" style="margin-left:20px"> Buddy's Notes (picture of cat)</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">You can put buttons here, but should you?</a></li>
+                <li><a href="#">What links should go here</a></li>
+                <li><a href="#">User picture-></a></li>
+                <li><a class="btn btn-floating btn-large grey darken-2 pulse"><i class="material-icons" >edit</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    @{
+        //Replace the _sidebar with a clone but that is actually a s2 sized item that hides on scren halfed
+        //if width < height -> hide sidebar
+    }
+        @Html.Partial("_sidebar")
+    
+    <div class="row col s10 offset-s2" style="overflow:auto;position:relative;">
+        
+        <div class="col s12 " style="height:100%">
+            <div class="card grey lighten-5">
+                <h3>Title</h3>
+                <p>For reference this entire view is the project and these cards are the project entries</p>
+                <p>This card needs to look better, try these things by using materialize css:</p>
+                <ul>
+                    <li>Find a way to make the text on this card have more distance from the edge of the card (read up on card,
+                        card-text in materialize)</li>
+                    <li> add all the information found on the project entry model here, I might remove some later but just make
+                        it look nice</li>
+                    <li> Make a new card that has an attached picture/drawing, there are other card classes for things like that</li>
+                    <li> Make a new entry in the nav bar at the top right and make it one of those round buttons that pulses (see
+                        CSS/pulse on materialize)</li>
+                    <li> take a look at ./index.html and have a giggle</li>
+                    <li> feel free to also play with the other cards</li>
+                </ul>
+            </div>
+
+
+            <div class="card" style="">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem lectus, iaculis sit amet orci eu, ullamcorper
+                    imperdiet leo. Proin a metus tellus. Quisque a ex eget est luctus dapibus. Donec lacinia dapibus felis,
+                    ut lobortis massa tincidunt vel. Sed ac urna quis est eleifend rutrum vitae a felis. Nullam felis enim,
+                    dapibus eget blandit a, porta a lacus. Donec vitae eros nec nisl porttitor egestas. Curabitur quis pretium
+                    sapien. Suspendisse molestie lectus tristique lectus fermentum, et egestas orci consectetur. Nunc nec
+                    lectus nisi. Vestibulum ut lacus risus. Nulla blandit congue tortor, in cursus nulla tristique quis.
+                    Donec dapibus accumsan ex et tempus. Suspendisse auctor nisi dolor, sed consectetur arcu finibus at.
+                    Aliquam ut gravida massa, maximus semper est. Maecenas dapibus, lorem vitae luctus commodo, elit erat
+                    laoreet elit, a viverra lectus ante vitae nisi.</p>
+            </div>
+            <!--
+            <div class="card" style="">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem lectus, iaculis sit amet orci eu, ullamcorper
+                    imperdiet leo. Proin a metus tellus. Quisque a ex eget est luctus dapibus. Donec lacinia dapibus felis,
+                    ut lobortis massa tincidunt vel. Sed ac urna quis est eleifend rutrum vitae a felis. Nullam felis enim,
+                    dapibus eget blandit a, porta a lacus. Donec vitae eros nec nisl porttitor egestas. Curabitur quis pretium
+                    sapien. Suspendisse molestie lectus tristique lectus fermentum, et egestas orci consectetur. Nunc nec
+                    lectus nisi. Vestibulum ut lacus risus. Nulla blandit congue tortor, in cursus nulla tristique quis.
+                    Donec dapibus accumsan ex et tempus. Suspendisse auctor nisi dolor, sed consectetur arcu finibus at.
+                    Aliquam ut gravida massa, maximus semper est. Maecenas dapibus, lorem vitae luctus commodo, elit erat
+                    laoreet elit, a viverra lectus ante vitae nisi.</p>
+            </div>
+
+            <div class="card" style="">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem lectus, iaculis sit amet orci eu, ullamcorper
+                    imperdiet leo. Proin a metus tellus. Quisque a ex eget est luctus dapibus. Donec lacinia dapibus felis,
+                    ut lobortis massa tincidunt vel. Sed ac urna quis est eleifend rutrum vitae a felis. Nullam felis enim,
+                    dapibus eget blandit a, porta a lacus. Donec vitae eros nec nisl porttitor egestas. Curabitur quis pretium
+                    sapien. Suspendisse molestie lectus tristique lectus fermentum, et egestas orci consectetur. Nunc nec
+                    lectus nisi. Vestibulum ut lacus risus. Nulla blandit congue tortor, in cursus nulla tristique quis.
+                    Donec dapibus accumsan ex et tempus. Suspendisse auctor nisi dolor, sed consectetur arcu finibus at.
+                    Aliquam ut gravida massa, maximus semper est. Maecenas dapibus, lorem vitae luctus commodo, elit erat
+                    laoreet elit, a viverra lectus ante vitae nisi.</p>
+            </div>
+
+            <div class="card" style="">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem lectus, iaculis sit amet orci eu, ullamcorper
+                    imperdiet leo. Proin a metus tellus. Quisque a ex eget est luctus dapibus. Donec lacinia dapibus felis,
+                    ut lobortis massa tincidunt vel. Sed ac urna quis est eleifend rutrum vitae a felis. Nullam felis enim,
+                    dapibus eget blandit a, porta a lacus. Donec vitae eros nec nisl porttitor egestas. Curabitur quis pretium
+                    sapien. Suspendisse molestie lectus tristique lectus fermentum, et egestas orci consectetur. Nunc nec
+                    lectus nisi. Vestibulum ut lacus risus. Nulla blandit congue tortor, in cursus nulla tristique quis.
+                    Donec dapibus accumsan ex et tempus. Suspendisse auctor nisi dolor, sed consectetur arcu finibus at.
+                    Aliquam ut gravida massa, maximus semper est. Maecenas dapibus, lorem vitae luctus commodo, elit erat
+                    laoreet elit, a viverra lectus ante vitae nisi.</p>
+            </div>
+            -->
+            <div style="margin-bottom:50px;height:1px"></div>
+            <div class="col s1"></div>
+            <div class="col s3">
+                    <a class="btn btn-floating btn-large grey darken-2 pulse"><i class="material-icons">menu</i></a>
+            </div>
+            <div class="col s1"></div>
+            <div class="col s4">
+                    <a class="btn btn-floating btn-large grey darken-2 pulse"><i class="material-icons">cloud</i></a>
+            </div>
+            <div class="col s3">
+                    <a class="btn btn-floating btn-large grey darken-2 pulse"><i class="material-icons">edit</i></a>
+            </div>
+            
+            <div style="margin-bottom:200px;height:1px"></div>
+            
+
+        </div>
+    </div>
+
+</div>

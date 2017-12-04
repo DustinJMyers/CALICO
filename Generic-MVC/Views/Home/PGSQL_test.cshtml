@@ -1,0 +1,25 @@
+﻿@using GMVC.Models
+@{
+    bool canopen = false;
+    try{
+    DB_Interface DB = new DB_Interface();
+    canopen = DB.CanOpen();
+    }
+    catch{
+
+    }
+}
+<!--
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+-->
+@Html.Partial("_Header")
+<div class="row">
+    <div class="col s10 offset-s1 card">
+        <h4 style="">PostgreSQL status:</h4>
+        <ul>
+            <li>Can we connect to the local DB? @(canopen)</li>
+        </ul>
+    </div>
+
+</div>

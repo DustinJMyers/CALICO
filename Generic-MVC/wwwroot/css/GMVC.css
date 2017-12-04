@@ -1,0 +1,4 @@
+﻿/*make disabled tabs appear grey*/
+ul.tabs .tab.disabled a,ul.tabs .tab.disabled a:hover{
+    color: grey;
+}
