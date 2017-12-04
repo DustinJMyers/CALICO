@@ -1,0 +1,54 @@
+@model GMVC.Models.Viewable.Table
+<!--Begin table-->
+    <div>
+        <div class="col s4 truncate"><h4>@Model.Name</h4></div>
+        @{  
+            if(Model.Show_Tools){
+                <div class="input-field col s3">
+                    <input disabled id="email" type="email" class="validate" placeholder=" ">
+                    <label for="email" data-error="wrong" data-success="right">Search</label>
+                </div>
+                <div class="input-field col s3">
+                    <select multiple disabled>
+                        <option value="" disabled selected></option>
+                        @{
+                            for(int i = 0; i < Model.Headers.Count; i++){
+                                <option value="@(i+1)">@Model.Headers[i]</option>
+                            }                                    
+                        }
+                    </select>
+                    <label>Fields</label>
+                    </div>     
+                    <div class="col s2">
+                        <a class="waves-effect waves btn-large btn-flat col s6 disabled" style="background-color:inherit"><i class="material-icons">print</i></a>
+                        <a class="waves-effect waves btn-large btn-flat col s6 disabled" style="background-color:inherit"><i class="material-icons">insert_chart</i></a>
+                    </div>               
+                    }
+                }        
+            <table class="striped highlight">
+                <thead>
+                    <tr>
+                        @{
+                            for(int i = 0; i < Model.Headers.Count; i++){
+                                <th>@Model.Headers[i]</th>
+                            }                                    
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                @{
+                    for(int i = 0; i < Model.Content.Count; i ++){
+                        <tr>
+                            @for(int z = 0; z < Model.Content[i].Count; z++){
+                                <td>@Model.Content[i][z]</td>
+                            }
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $('select').material_select();
+    </script>
+<!--End table-->
