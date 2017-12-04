@@ -1,0 +1,56 @@
+﻿@using GMVC.Models
+@using GMVC.Models.Viewable
+@using Npgsql;
+@{
+    Table test_table = new Table();
+    test_table.Name = "Test Table";
+    test_table.Headers.Add("Test1");
+    test_table.Headers.Add("Test2");
+    test_table.Headers.Add("Test3");
+    test_table.Headers.Add("Test4");
+    test_table.Content.Add(test_table.Headers);
+    test_table.Content.Add(test_table.Headers);
+    test_table.Content.Add(test_table.Headers);
+    test_table.Show_Tools = true;
+
+    DB_Interface rawSQL = new DB_Interface();
+    NpgsqlCommand query = rawSQL.MakeCommand("SELECT * FROM projects");
+
+
+    Table tb2 = new Table();
+    tb2.Name = "Query test";
+    tb2.Headers.Add("Results:");
+    tb2.Content = rawSQL.MakeQuery(query);
+}
+<!--
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+-->
+@Html.Partial("_Header")
+<div class="row">
+    @Html.Partial("_sidebar")
+    <div class="col s12 l10 offset-l2 row" style="height:calc(100vh - 60px);overflow:auto;">
+        
+        <!--Begin multitable-->
+        <div class="card">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test1">@test_table.Name</a></li>
+                    <li class="tab col s3 disabled"><a href="#test2">Tab 2</a></li>
+                    <li class="tab col s3 disabled"><a href="#test3">Tab 3</a></li>
+                    <li class="tab col s3 disabled" ><a href="#test4" >Disabled Tab</a></li>
+                </ul>
+            </div>                                     
+            @Html.Partial("_table", test_table)
+        </div>
+        <script>
+            $('select').material_select();
+        </script>
+        <!--End multitable-->
+
+        <div class="card">
+            @Html.Partial("_table", tb2)
+        </div>
+            
+     </div>
+</div>
