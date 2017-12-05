@@ -7,4 +7,3 @@ CREATE SCHEMA "CALICO"
 
 COMMENT ON SCHEMA "CALICO"
   IS 'Schema (tablespace) for the CALICO project.';
-
