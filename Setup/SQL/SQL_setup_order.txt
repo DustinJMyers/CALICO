@@ -1,0 +1,15 @@
+# Order to run in:
+
+# SCHEMA
+Schemas/CREATE_Schema.sql
+
+# TABLES
+Tables/CREATE_User.sql
+Tables/CREATE_User_Contact.sql
+Tables/CREATE_User_Education.sql
+
+# FUNCTIONS
+functions/cascade_user_addition.sql
+
+# TRIGGERS & BINDS
+triggers/cascade_user_addtition_trigger.sql
