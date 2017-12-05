@@ -6,9 +6,10 @@ CREATE TABLE "CALICO"."User"
 (
   "First Name" text, -- First Name of the User
   "Last Name" text, -- Last name of user.
-  "ID" text, -- Simple ID of the user. Also referred to as 6+2 at UC.
-  "ID Number" text, -- Longer ID of the user. Also known as M number at UC.
-  "User Key"  integer PRIMARY KEY NOT NULL DEFAULT nextval('"CALICO_User_User Key_seq"'::regclass) -- Used by the DB to associate data with other tables
+  "ID" text UNIQUE, -- Simple ID of the user. Also referred to as 6+2 at UC.
+  "ID Number" text UNIQUE, -- Longer ID of the user. Also known as M number at UC.
+  "User Key" serial NOT NULL, -- Used by the DB to associate data with other tables
+  CONSTRAINT "User_pkey" PRIMARY KEY ("User Key")
 )
 WITH (
   OIDS=FALSE
