@@ -1,0 +1,15 @@
+I do hope to automate this when finished 
+Order to run in:
+
+///SCHEMA
+MAKE SCHEMA.sql
+
+///TABLES
+User_Tables/CREATE User.sql
+User_Tables/CREATE User_Education.sql
+
+///FUNCTIONS
+cascade_user_addtition.sql
+
+///TRIGGERS & BINDS
+cascade_user_creation_bind.sql
